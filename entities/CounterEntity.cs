@@ -5,14 +5,6 @@ namespace Spike.Inventory
     using Microsoft.Azure.WebJobs;
     using Microsoft.Azure.WebJobs.Extensions.DurableTask;
 
-    public interface ICounter
-    {
-        void Add(int amount);
-        Task Reset();
-        Task<int> Get();
-        void Delete();
-    }
-
     [JsonObject(MemberSerialization.OptIn)]
     public class Counter : ICounter
     {
